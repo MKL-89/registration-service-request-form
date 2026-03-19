@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Company Service Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>COMPANY REGISTRATION / SERVICE REQUEST</h2>
+
+<form>
+
+    <!-- Personal Information -->
+    <fieldset>
+        <legend>Personal Information</legend>
+
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required minlength="3">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+    </fieldset>
+
+    <!-- Company Information -->
+    <fieldset>
+        <legend>Company Information</legend>
+
+        <label for="cname">Company Name:</label>
+        <input type="text" id="cname" name="cname" required>
+
+        <label for="website">Website:</label>
+        <input type="url" id="website" name="website">
+
+        <label for="size">Company Size:</label>
+        <select id="size" name="size" required>
+            <option value="">Select</option>
+            <option>8-10</option>
+            <option>11-50</option>
+        </select>
+
+        <label for="industry">Industry:</label>
+        <input type="text" id="industry" name="industry" required>
+    </fieldset>
+
+    <fieldset>
+        <legend>Service Request</legend>
+
+        <p>Service Type:</p>
+        <input type="radio" id="consulting" name="service" value="consulting" required>
+        <label for="consulting">Consulting</label>
+
+        <input type="radio" id="dev" name="service" value="development">
+        <label for="dev">Development</label>
+
+        <input type="radio" id="support" name="service" value="support">
+        <label for="support">Support</label>
+
+        <p>Preferred Contact:</p>
+        <input type="checkbox" id="emailContact" name="contact">
+        <label for="emailContact">Email</label>
+
+        <input type="checkbox" id="phoneContact" name="contact">
+        <label for="phoneContact">Phone</label>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time" required>
+
+        <label for="budget">Budget:</label>
+        <input type="number" id="budget" name="budget" min="100" max="10000">
+    </fieldset>
+
+    <!-- Message -->
+    <fieldset>
+        <legend>Message</legend>
+
+        <label for="msg">Additional Info:</label>
+        <textarea id="msg" name="msg" minlength="10" maxlength="200"></textarea>
+
+        <br><br>
+
+        <input type="checkbox" id="agree" required>
+        <label for="agree">I agree to terms and conditions</label>
+    </fieldset>
+
+    <br>
+
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+
+</form>
+
+</body>
+</html>
